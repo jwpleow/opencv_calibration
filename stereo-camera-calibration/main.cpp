@@ -35,7 +35,7 @@ constexpr bool save_images = false; // whether to save calibration images taken 
 const int view_rectified = 5; // no of rectified images to view after calibrating
 // calibration flags used in stereo_calib example - see flag details at stereoCalibrate() in OpenCV documentation
 // const int calibration_flags = cv::CALIB_FIX_ASPECT_RATIO + cv::CALIB_ZERO_TANGENT_DIST + cv::CALIB_USE_INTRINSIC_GUESS + cv::CALIB_SAME_FOCAL_LENGTH + cv::CALIB_RATIONAL_MODEL + cv::CALIB_FIX_K3 + cv::CALIB_FIX_K4 + cv::CALIB_FIX_K5;
-const int calibration_flags = cv::CALIB_ZERO_TANGENT_DIST | cv::CALIB_USE_INTRINSIC_GUESS | cv::CALIB_SAME_FOCAL_LENGTH | cv::CALIB_TILTED_MODEL | cv::CALIB_THIN_PRISM_MODEL | cv::CALIB_RATIONAL_MODEL;
+const int calibration_flags = cv::CALIB_ZERO_TANGENT_DIST | cv::CALIB_FIX_INTRINSIC | cv::CALIB_SAME_FOCAL_LENGTH | cv::CALIB_TILTED_MODEL | cv::CALIB_THIN_PRISM_MODEL | cv::CALIB_RATIONAL_MODEL;
 int main(int argc, char **argv)
 {
     std::string arg_keys = "{w|14|no. of squares in the x-direction of the chessboard}\
