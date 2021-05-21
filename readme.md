@@ -40,4 +40,4 @@ Run:
 ```
 
 
-Unforunately, this calibrator requires the entire chessboard to be visible. Probably should switch to chAruco board calibration?
+Unforunately, this calibrator requires the entire chessboard in the field of view of the camera. look at <https://docs.opencv.org/master/d9/d0c/group__calib3d.html#gadc5bcb05cb21cf1e50963df26986d7c9>?
