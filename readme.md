@@ -7,6 +7,15 @@ Printed https://github.com/opencv/opencv/blob/master/modules/calib3d/doc/pics/ch
 ```
 
 If doing offline calibration - see format from `generate_calib_xml.py`
+
+## Live Calibration
+Uses cv::VideoCapture - the current string used assumes the camera feed is a UDP feed on port 5000 from GStreamer:   
+e.g. on the computer with the cameras:
+```
+gst-launch-1.0 v4l2src ! video/x-raw, width=1280, height=400, format=GRAY8 ! videoconvert ! video/x-raw, format=I420 ! jpegenc ! image/jpeg ! jpegparse ! rtpjpegpay name=pay0 pt=96 ! udpsink port=5000 host=<ip of the computer running the calibration code>
+```
+
+
 ## Single camera calibration
 To run the single camera calibration:  
 1. Set the necessary parameters and check possible arguments in `single-camera-calibration/main.cpp`    
